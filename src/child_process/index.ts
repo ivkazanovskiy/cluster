@@ -11,8 +11,8 @@ if (cluster.isPrimary) {
   console.log(`Primary ${process.pid} is running`);
 
   // create 2 workers
-  const worker1 = fork(path.join(__dirname, "../workers/fib1.worker"));
-  const worker2 = fork(path.join(__dirname, "../workers/fib2.worker"));
+  const worker1 = fork(path.join(__dirname, "./workers/fib1.worker"));
+  const worker2 = fork(path.join(__dirname, "./workers/fib2.worker"));
 
   console.log(`Child process 1 has PID: ${worker1.pid}`);
   console.log(`Child process 2 has PID: ${worker2.pid}`);

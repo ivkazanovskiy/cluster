@@ -2,9 +2,9 @@
 module.exports = {
   apps: [
     {
-      name: "fib app",
-      script: "dist/cluster/pm2.js",
-      watch: ".",
+      name: "Cluster express app",
+      script: "dist/pm2/index.js",
+      watch: true,
       instances: "MAX",
       autorestart: true,
       exec_mode: "cluster",
